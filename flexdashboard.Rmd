@@ -57,7 +57,7 @@ avg_temp_by_year <- ny_noaa_clean %>%
   )
 
 # Create the line plot using plot_ly
-plot_ly(width = "100%") %>% 
+plot_ly(width = NULL) %>% 
   add_trace(
     data = avg_temp_by_year, 
     x = ~year, 
@@ -87,11 +87,14 @@ plot_ly(width = "100%") %>%
     name = "Temperature Difference"
   ) %>% 
   layout(
-    title = "Trend of Annual Max and Min Temperatures with Temperature Difference", 
+    width = "100%", 
+    autosize = TRUE, 
+    title = "Trend of Annual Max, Min and Difference", 
     xaxis = list(title = "Year"), 
     yaxis = list(title = "Temperature (°C)"), 
     barmode = 'overlay',  # Overlay bars with lines
-    legend = list(title = list(text = "Temperature Type"), orientation = "h", x = 0.5, y = -0.2)
+    legend = list(title = list(text = "Temperature Type"), 
+                  orientation = "h", x = 0.5, y = -0.2)
   )
 ```
 
@@ -113,8 +116,7 @@ month_colors <- c("#CC625F", "#F07874", "#FD9BA0", "#FCC3B4",
                   "#C0E560", "#A0FCE8", "#92DDF8", "#8EB4D0")
 
 # Plot monthly temperature range as box plot with different colors for each month
-plot_ly(width = "100%", 
-        temp_range, 
+plot_ly(temp_range, 
         x = ~month, 
         y = ~temp_range, 
         type = "box", 
@@ -122,6 +124,7 @@ plot_ly(width = "100%",
         colors = month_colors,  # Change the color scale 
         marker = list(size = 3)) %>%  # Set the size of outlier points
   layout(
+    autosize = TRUE, 
     title = "Monthly Temperature Range", 
     xaxis = list(title = "Month"), 
     yaxis = list(title = "Temperature Range (°C)"),
@@ -139,8 +142,7 @@ monthly_prcp <- ny_noaa_clean %>%
   summarise(mean_prcp = mean(prcp, na.rm = TRUE), .groups = "drop")
 
 # Create the heatmap with plot_ly
-plot_ly(width = "100%", 
-        monthly_prcp, 
+plot_ly(monthly_prcp, 
         x = ~month, 
         y = ~year, 
         z = ~mean_prcp, 
@@ -151,6 +153,7 @@ plot_ly(width = "100%",
         zmax = max(monthly_prcp %>% pull(mean_prcp), na.rm = TRUE)  # Set the max dynamically based on your data
 ) %>% 
   layout(
+    autosize = TRUE, 
     title = "Average Monthly Precipitation", 
     xaxis = list(
       title = "Month", 
