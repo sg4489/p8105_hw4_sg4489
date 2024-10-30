@@ -1,0 +1,73 @@
+---
+title: "Shangzi(Ada) Gao 高尚孜"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<style>h1.title {text-align: center;}</style>
+
+<img src="files/sz_gao.JPG" style="width:50%">
+
+### Introduction
+
+First-year MS student in Biostatistics  
+Columbia University Mailman School of Public Health
+
+### Experience
+
+Before coming to Columbia University, I completed my undergraduate degree in Computer Science and Technology at Northeast Normal University in Changchun, China (2018-2022). Following that, I worked as a lab technician at the Beijing Center for Brain Science and Brain-Inspired Intelligence for two years (2022-2024), where my primary responsibility was performing behavioral data analysis using Python.  
+
+
+If you'd like to learn more about my academic and professional experience, please see the "About" page.  
+
+### Fun Facts about me...
+
+\# Made in China  
+
+\# Cat person  
+
+I have an adorable little cat named Xiaoman(小满)  
+
+<img src="files/cat.JPG" style="width:50%">
+
+\# Taste unusual things  
+
+\# A big fan of playing video games  
+
+\# A sparkling water fanatic through and through   
+
+\# A scent-sensitive soul and an avid collector of unique fragrances  
+
+\# Can pull off a 48-hour awake marathon or dive into a 24-hour hibernation
+
+### Academic Recoreds
+
+#### Courses Enrolled in for Fall 2024
+
+```{r, echo=FALSE}
+library(DT)
+
+courses <- data.frame(
+  Course_Code = c("P6400", "P8104", "P8105", "P8130"),
+  Course_Name = c("Principle of Epidemiology", " Probability", 
+                  "Data Science", "Biostatistical Method I"),
+  Instructor = c("Albrecht, Sandra (ssa2018)", "Gu, tian (tg2880)", 
+                 "Goldsmith, Arthur Jeff (ajg2202)", "Liu, Molei (ml4890)"),
+  Credits = c(3, 3, 3, 3),
+  Schedule = c("Wed/Thu 17:30-18:50", "Mon/Wed 10:00-11:20", 
+               "Tue/Thu 10:00-11:20", "Fri 13:00-15:50")
+)
+
+datatable(courses, 
+          options = list(dom = 't', autoWidth = TRUE), 
+          rownames = FALSE)
+```
+
+### Contact Information
+Shangzi Gao  
+Email: sg4489@cumc.columbia.edu
+Address: 50 Haven Ave, New York, 10032
+
+
