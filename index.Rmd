@@ -30,7 +30,8 @@ If you'd like to learn more about my academic and professional experience, pleas
 
 I have an adorable little cat named Xiaoman(小满)  
 
-<img src="files/mycat.jpg" style="width:50%">
+![Cat image](files/mycat.jpg)
+
 
 \# Taste unusual things  
 
