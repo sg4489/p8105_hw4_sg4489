@@ -8,7 +8,7 @@ output:
 
 <style>h1.title {text-align: center;}</style>
 
-<img src="files/szgao.jpg" style="width:50%">
+<img src="image/szgao.jpg" style="width:50%">
 
 ### Introduction
 
@@ -30,8 +30,7 @@ If you'd like to learn more about my academic and professional experience, pleas
 
 I have an adorable little cat named Xiaoman(小满)  
 
-![Cat image](files/mycat.jpg)
-
+<img src="image/mycat.jpg" style="width:50%">
 
 \# Taste unusual things  
 
